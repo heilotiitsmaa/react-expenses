@@ -1,8 +1,12 @@
 
+import './App.css';
+import ExpenseItem from './components/ExpenseItem';
 const App = () => {
   return (
-    <div>App</div>
-  )
+    <div className="App">
+      <ExpenseItem />
+    </div>
+  );
 }
 
-export default App
+export default App;
