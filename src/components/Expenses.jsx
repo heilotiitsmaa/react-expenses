@@ -1,20 +1,17 @@
 /* eslint-disable react/prop-types */
 //expense-item__price fail kättesaadavaks väljaspool
 import ExpenseItem from "./ExpenseItem.jsx";
+import Card from "./Card.jsx";
 import './Expenses.css'
-const Expenses = ({expenses}) => {
+const Expenses = (props) => {
     // Kontrollime saabunud props-e, et näha, mis andmed komponendile jõuavad.
   
     return (
-      <div className="expenses">
-        {expenses.map((expense) => (
-          <ExpenseItem
-            key={expense.id} // Unikaalne võti iga elemendi jaoks.
-            data={expense} // Saadame ExpenseItem-le ühe kulu objekti.
-          />
-        ))}
-      </div>
-    );
+      <Card className="expenses">
+          <ExpenseItem data={props.expenses[0]}/>
+          <ExpenseItem data={props.expenses[1]}/>
+      </Card>
+    )
   };
   
   export default Expenses;
