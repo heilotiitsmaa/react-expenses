@@ -23,6 +23,7 @@ const dateChangeHandler = (event) => {
       price: enteredPrice,
       date: new Date(enteredDate)
     }
+    props.onSaveExpenseData(expenseData)
   setEnteredTitle('')
   setEnteredPrice('')
   setEnteredDate('')
