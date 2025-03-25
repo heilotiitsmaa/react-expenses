@@ -4,7 +4,7 @@ import Card from '../UI/Card.jsx'
 import {useState} from 'react';
 const ExpenseItem = (prop) => {
     const [title, setTitle] = useState(prop.expenseData.title) //title uueneb kogu aeg
-//console.log(prop.data.title);
+console.log(prop);
 //const clickHandler = () => {
     //console.log('Pressed it!')
     //setTitle(`Updated by click ${prop.data.title}`) //title jääb samaks
@@ -13,9 +13,8 @@ const ExpenseItem = (prop) => {
 
 return (
     <Card className="expense-item">
-        <ExpenseDate date={prop.ExpenseData.date}/>
+        <ExpenseDate date={prop.expenseData.date}/>
         <div className='expense-item__description'>
-            <h2>{prop.data.title}</h2>
             <h2>{title}</h2>
             <div className='expense-item__price'>{prop.expenseData.amount}</div>
         </div>
