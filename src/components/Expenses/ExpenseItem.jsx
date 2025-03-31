@@ -12,14 +12,17 @@ console.log(prop);
 //}
 
 return (
-    <Card className="expense-item">
+    <li>
+    <Card className='expense-item'>
         <ExpenseDate date={prop.expenseData.date}/>
         <div className='expense-item__description'>
             <h2>{title}</h2>
-            <div className='expense-item__price'>{prop.expenseData.amount}</div>
+            <div className='expense-item__price'>{prop.expenseData.amount}
+
+            </div>
         </div>
-        {/*<button onClick={clickHandler}>Press here!</button>*/}
     </Card>
+</li>
   )
 }
 
